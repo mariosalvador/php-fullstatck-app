@@ -1,0 +1,67 @@
+
+## lAYOUT BASE
+-- FORMA DE CRIAÇÃO 
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path_to_your_css.css"> <!-- Inclua seu CSS -->
+    <title><?php echo $title ?? 'Meu Site'; ?></title> <!-- Título da página -->
+</head>
+<body>
+    <header>
+        <?php include('header.php'); ?> <!-- Cabeçalho incluído -->
+    </header>
+
+    <aside>
+        <?php include('aside.php'); ?> <!-- Menu lateral incluído -->
+    </aside>
+
+    <main>
+        <?php echo $content; ?> <!-- O conteúdo de cada página será incluído aqui -->
+    </main>
+
+    <footer>
+        <?php include('footer.php'); ?> <!-- Rodapé incluído -->
+    </footer>
+</body>
+</html>
+
+
+# FORMA DE UTILIZAÇÃO
+
+<?php
+$title = "Página Inicial"; // Definindo o título para esta página
+ob_start(); // Inicia o buffer de saída
+?>
+<h2>Página Inicial</h2>
+<p>Bem-vindo à página inicial do site!</p>
+<!-- Conteúdo específico da página inicial -->
+
+<?php
+$content = ob_get_clean(); // Pega o conteúdo da página
+include('layout.php'); // Inclui o layout base
+?>
+
+
+## Compilar o CSS
+--- Para gerar o CSS final, execute o seguinte comando:
+
+bash
+Copiar código
+npx tailwindcss -i ./src/style.css -o ./dist/output.css --watch
+
+
+## Desenvolvimento e Build
+Durante o desenvolvimento, mantenha o comando npx tailwindcss --watch em execução para que o Tailwind recompile o CSS automaticamente quando você salvar seus arquivos.
+
+Quando estiver pronto para produção, você pode otimizar o CSS executando:
+
+bash
+Copiar código
+NODE_ENV=production npx tailwindcss -i ./src/style.css -o ./dist/output.css --minify
+Isso gerará um arquivo CSS otimizado para produção.
+
+Seguindo esses passos, você integrará o Tailwind CSS ao seu projeto PHP, permitindo que você use as utilidades e componentes do Tailwind diretamente em seus arquivos PHP.

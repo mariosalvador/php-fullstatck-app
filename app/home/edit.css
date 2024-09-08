@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+
+ #section-edit-content{
+    width:85%; 
+    height:max-content; 
+    padding:10px; 
+    /* background-color:rgb(29, 138, 227);  */
+    display: flex;
+    flex-direction: row ;
+    justify-content: center;
+    align-items: start;
+ }
+
+form{
+    /* background-color: rgb(235, 51, 51); */
+    width: 98%;
+    height: max-content;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    
+    padding-left: 40px;
+    padding-right: 40px;
+
+    border-radius: 10px;
+    box-shadow: 1px 12px 20px -12px black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:30px;
+}
+
+#section-form-edit{
+    /* background-color: green; */
+    width: 350px;
+    height: 100%;
+}
+
+#div-form-edit{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+#section-form{
+    /* background-color: green; */
+    width: 400px;
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+#article-edit-photo {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-file {
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+#preview-image {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover; /* Garante que a imagem preencha a área sem distorcer */
+}
+
+form>section>h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.49);
+}
+/* form>div{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+} */
+
+#div-input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#update{
+    margin-top:20px ;
+
+    width: 100%;
+    height: 40px;
+
+    border: 1px #B2935B solid ;
+    border-radius: 5px;
+      
+    outline-width: 0.5px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    background-color: rgb(255, 255, 255);
+
+    font-weight: 700;
+    color: rgba(30, 30, 30, 0.908);
+    font-size: 20px;
+}
+label{
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.736);
+    font-size: 16px;
+}
+
+input{
+    width: 100%;
+    height: 40px;
+
+    border: none;
+    outline: 1px #B2935B solid;
+    border-radius: 4px;
+    background-color: white;
+
+    padding-right: 10px;
+    padding-left: 10px;
+
+    font-weight: 700;
+    color: rgba(30, 30, 30, 0.908);
+    font-size: 15px;
+}
+
